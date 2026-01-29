@@ -1,2 +1,2 @@
 export const  PORT = 1000;
-export const mongoDBURL='mongodb://localhost:27017/test'   
+export const mongoDBURL='mongodb+srv://anshnahar686_db_user:bookstore@cluster0.xl4tlcn.mongodb.net/'   
