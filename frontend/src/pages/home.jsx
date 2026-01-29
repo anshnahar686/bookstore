@@ -11,7 +11,7 @@ const Home = () => {
     const [showtype, setShowtype] = useState('table');
     useEffect(() => {
         setLoading(true);
-        axios.get('http://localhost:1000/books').then((response) => {
+        axios.get('https://bookstore-igct.onrender.com/books').then((response) => {
             setBooks(response.data.data);
             console.log(setBooks);
             setLoading(false);

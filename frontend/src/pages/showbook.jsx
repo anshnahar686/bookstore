@@ -9,7 +9,7 @@ const Showbook=()=>{
     const {id}=useParams();
     useEffect(()=>{
         setLoading(true);
-        axios.get(`http://localhost:1000/books/${id}`).then((response)=>{
+        axios.get(`https://bookstore-igct.onrender.com/books/${id}`).then((response)=>{
             setBook(response.data);
             console.log(setBook);
             setLoading(false);

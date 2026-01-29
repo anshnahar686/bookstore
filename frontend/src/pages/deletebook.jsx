@@ -11,7 +11,7 @@ const Deletebook=()=>{
     const {enqueueSnackbar}=useSnackbar();
     const handleBook=()=>{
         setloader(true)
-        axios.delete(`http://localhost:1000/books/${id}`).then(()=>{
+        axios.delete(`https://bookstore-igct.onrender.com/books/${id}`).then(()=>{
             setloader(false)
             enqueueSnackbar("Book deleted successfully",{variant:'success'});
             navigate('/')

@@ -15,7 +15,7 @@ const EditBook=()=>{
     const {enqueueSnackbar}=useSnackbar();
     useEffect(()=>{
         setloading(true)
-        axios.get(`http://localhost:1000/books/${id}`).then((response)=>{
+        axios.get(`https://bookstore-igct.onrender.com/books/${id}`).then((response)=>{
                         setauthor(response.data.author)
                         settitle(response.data.title)
                         setyear(response.data.publishYear)

@@ -17,16 +17,14 @@ const Createbook=()=>{
                 author,
                 publishYear,
             }
-            axios.post(`http://localhost:1000/books`,data).then(()=>{
+            axios.post(`https://bookstore-igct.onrender.com/books`,data).then(()=>{
                 setloading(false);
                 enqueueSnackbar("Book created successfully",{variant:'success'});
                 navigate('/');
+            }).catch((err)=>{
+                console.log(err)
             })
-            .catch(error)
-            {
-                // alert('An error has been occured')
-                enqueueSnackbar("Book created failed",{variant:'error'});
-            }
+            
     }
     // 
     return(
