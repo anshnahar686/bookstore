@@ -15,6 +15,7 @@ app.use('/books',bookRoute)
 mongoose.connect(mongoDBURL).then(() => {
     console.log('app is connected to database')
 }).catch((e) => {
+    console.log(e)
     console.log("app is not connected");
 })
 app.listen(PORT, () => {
