@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Spinner from "../components/spinner";
+import Spinner from "../components/Spinner";
 import Table from "../components/home/table";
 import Cards from "../components/home/card";
 import {Link} from "react-router-dom";
@@ -11,7 +11,7 @@ const Home = () => {
     const [showtype, setShowtype] = useState('table');
     useEffect(() => {
         setLoading(true);
-        axios.get('https://bookstore-igct.onrender.com/books').then((response) => {
+        axios.get('https://bookstore-1-648i.onrender.com/books').then((response) => {
             setBooks(response.data.data);
             console.log(setBooks);
             setLoading(false);

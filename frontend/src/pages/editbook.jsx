@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import Backbutton from "../components/backbutton";
-import Spinner from "../components/spinner";
+import Spinner from "../components/Spinner";
 import axios from "axios";
 
 import { useNavigate,useParams } from "react-router-dom";
@@ -15,7 +15,7 @@ const EditBook=()=>{
     const {enqueueSnackbar}=useSnackbar();
     useEffect(()=>{
         setloading(true)
-        axios.get(`https://bookstore-igct.onrender.com/books/${id}`).then((response)=>{
+        axios.get(`https://bookstore-1-648i.onrender.com/books/${id}`).then((response)=>{
                         setauthor(response.data.author)
                         settitle(response.data.title)
                         setyear(response.data.publishYear)
@@ -35,7 +35,7 @@ const EditBook=()=>{
                 author,
                 publishYear,
             }
-            axios.put(`http://localhost:1000/books/${id}`,data).then(()=>{
+            axios.put(`https://bookstore-1-648i.onrender.com/books/${id}`,data).then(()=>{
                 setloading(false);
                 enqueueSnackbar('Book updated successfully',{variant:'success'});
                 navigate('/');

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Spinner from '../components/spinner';
+import Spinner from "../components/Spinner";
 import Backbutton from '../components/backbutton';
 const Showbook=()=>{
     const [book,setBook] =useState({});
@@ -9,7 +9,7 @@ const Showbook=()=>{
     const {id}=useParams();
     useEffect(()=>{
         setLoading(true);
-        axios.get(`https://bookstore-igct.onrender.com/books/${id}`).then((response)=>{
+        axios.get(`https://bookstore-1-648i.onrender.com/books/${id}`).then((response)=>{
             setBook(response.data);
             console.log(setBook);
             setLoading(false);

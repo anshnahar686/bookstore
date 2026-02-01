@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Backbutton from "../components/backbutton";
-import Spinner from "../components/spinner";
+import Spinner from "../components/Spinner";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
@@ -17,7 +17,7 @@ const Createbook=()=>{
                 author,
                 publishYear,
             }
-            axios.post(`https://bookstore-igct.onrender.com/books`,data).then(()=>{
+            axios.post(`https://bookstore-1-648i.onrender.com/books`,data).then(()=>{
                 setloading(false);
                 enqueueSnackbar("Book created successfully",{variant:'success'});
                 navigate('/');
