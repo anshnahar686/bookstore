@@ -6,8 +6,8 @@ import bookRoute from './routes/bookRoute.js';
 import cors from 'cors';
 const app = express();
 app.use(express.json());
-app.get('/', (res, req) => {
-    console.log(req)
+app.get('/', (req,response) => {
+    // console.log(req)
     return req.status(234).send("hello from the server");
 })
 app.use(cors());
