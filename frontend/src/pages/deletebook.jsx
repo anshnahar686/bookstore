@@ -30,7 +30,7 @@ const Deletebook=()=>{
                 <Backbutton/>
                 <h1 className="text-3xl my-4">Delete Book</h1>
                 {loading ?<Spinner/>:""}
-                <div className="flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto">
+                <div className="flex flex-col items-center border-2 border-sky-400 rounded-xl max-w-full p-8 mx-auto">
                     <h3>Are You Sure You Want to delete this book?</h3>
                     <button className="p-4 bg-red-600 text-white m-8 w-full" onClick={handleBook}>Yes Delete this</button>
                 </div>
